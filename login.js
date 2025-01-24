@@ -1,54 +1,28 @@
-
-// login.js
-
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-
-    form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent form submission
-
-// validate email and password.
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-// Check for empty fields
-    if (!email || !password) {
-        showAlert('Please fill in all fields.');
-        return;
-        }
-
- // Check for weak password
-        if (!isStrongPassword(password)) {
-            showAlert(
-                'Your password must include at least 8 characters, a number, and a symbol.'
-            );
-            return;
-        }
-
-        // Simulate login validation
-        if (email !== 'test@example.com' || password !== 'Password123!') {
-            showAlert('Incorrect email or password.');
-        } else {
-            alert('Login successful!');
-        }
-    });
-});
-
-// Show Alert
-function showAlert(message, type="error") {
-    const alert = document.createElement('div');
-    alert.className = 'alert alert-danger text-center';
-    alert.textContent = message;
-    document.body.prepend(alert);
-
-    // Remove the alert after 3 seconds
-    setTimeout(() => alert.remove(), 3000);
+function showSignUp() {
+    document.getElementById('signInForm').style.display = 'none';
+    document.getElementById('signUpForm').style.display = 'block';
 }
 
-// Password Strength Checker
-function isStrongPassword(password) {
-    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return regex.test(password);
+function showSignIn() {
+    document.getElementById('signUpForm').style.display = 'none';
+    document.getElementById('signInForm').style.display = 'block';
 }
+
+function signIn() {
+    // Simulate sign-in logic
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    if (email !== 'test@example.com' || password !== 'password') {
+        document.getElementById('errorMessage').style.display = 'block';
+    } else {
+        document.getElementById('errorMessage').style.display = 'none';
+        alert('Signed in successfully!');
+    }
+}
+
+function signUp() {
+    // Simulate sign-up logic
+    alert('Sign up successful!');
+}
+
+document.querySelector('.navbar .btn-signup').addEventListener('click', showSignUp); 
