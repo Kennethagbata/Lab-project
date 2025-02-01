@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  margin: 0;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  height: 100vh;
+  width: 40vw;
+  margin: 0;
+}
+
+.left-panel {
+  background-color: #1b496f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  flex: 1.2;
+}
+
+.right-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+  font-size: 0.85em;
+  flex: 0.8;
+}
+
+.form-container {
+  width: 100vw;
+  max-width: auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 2px;
+  align-content: center;
+  margin-left: 140px;
+}
+.form-header {
+  margin-bottom: 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.form-header h2 {
+  color: #5a0b4d;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #2972ad;
+  border-color: #2972ad;
+  border-radius: 0;
+  border-width: 1.5px;
+  padding: 8px 12px;
+}
+
+.btn-primary:hover {
+  background-color: #2972ad;
+  border-color: #5a0b4d;
+  box-shadow: 0 4px 6px #5a0b4d;
+}
+.error-message {
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .btn-signup {
+  background-color: #5a0b4d;
+  color: white;
+  border: none;
+}
+
+.navbar .btn-signup:hover {
+  background-color: #5a0b4d;
+}
+
+.password-suggestions {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.left-panel p {
+  white-space: nowrap;
+}
+
+/* Large Screen (Desktops) */
+/* Default styles are applied here */
+
+/* Medium Screen (Tablets) */
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .form-container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .btn-primary {
+    width: 90%;
+  }
+}
+
+/* Small Screen (Phones) */
+@media (max-width: 767px) {
+  .form-header {
+    margin-top: 20px;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+  .form-control {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  .right-panel {
+    margin-top: 2px !important;
+    padding-top: 2px;
+  }
+  .left-panel {
+    margin-top: 50px;
+  }
+  .img1, .img2, .img3, .img {
+    display: none;
+  }
+}
+
+.linkin {
+  text-decoration: none;
+}
+
+.link1 {
+  color: black;
+}
+
+.link2 {
+  color: #5a0b4d;
+}
+
+.forgot-password {
+  color: #5a0b4d;
+  float: right;
+  font-size: small;
+  text-decoration: none;
+  margin-top: -20px;
+}
