@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden !important;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .container {
+    margin-left: 50px;
+  }
+ .info-section {
+    width: 90%;
+ }
+ .fint {
+    font-size: small;
+ }
+  .signin:active {
+    background-color: rgb(235, 231, 231) !important;
+  }
+
+  .signup:active {
+    color: rgb(42, 42, 42) !important;
+  }
+
+  .hero {
+    background-color: #1b496f;
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+    /* width: 100%; */
+}
+
+.btn-danger:active {
+    color: rgb(42, 42, 42) !important;
+}
+
+.info-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+/* Large Screen (Desktops) */
+@media (min-width: 992px) {
+    .hero-section {
+        height: 100vh;
+    }
+    .navlogo {
+        display: none;
+    }
+}
+
+/* Medium Screen (Tablets) */
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex;
+    }
+    .hero {
+        padding: 20px;
+        width: 100%;
+    }
+    .container {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .img {
+        display: none;
+    }
+    .info-section {
+        padding: 20px;
+        width: 100%;
+    } 
+    .fint {
+        font-size: small;
+    }
+}
+
+/* Small Screen (Phones) */
+@media (max-width: 767px) {
+    body {
+        overflow-x: auto;
+        margin-left: 0;
+    }
+    .navbar {
+        background-color: #1b496f;
+        box-shadow: none;
+        border: none;
+    }
+    .hero {
+        padding: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .hero h1 {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    .hero p {
+        font-size: 0.8rem;
+        margin-left: 0;
+    }
+    .container {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .hero .btn-danger {
+        width: 100%;
+    }
+    .img {
+        display: none;
+    }
+    .info-section {
+        width: 60% 50%;
+    }
+    .fint {
+        font-size: 8.6px;
+    }
+}

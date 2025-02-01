@@ -12,8 +12,8 @@ body {
 .container {
   display: flex;
   height: calc(100vh - 60px);
-  width: 100vw;
   margin: 0;
+  width: 100vw;
 }
 
 .left-panel, .right-panel {
@@ -121,46 +121,60 @@ body {
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-    margin-top: 60px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .left-panel {
-    margin-top: 60px;
-  }
-  .left-panel, .right-panel {
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  .form-container {
-    max-width: 95%;
-    margin: 0 auto;
-  }
-  .btn-primary {
-    width: 90%;
-  }
-  .img1, .img2, .img3, .img {
-    display: none;
-  }
-  .form-control {
-    width: 95% !important;
-    margin: 0 auto;
-  }
+/* Large Screen (Desktops) */
+/* Default styles are applied here */
+
+/* Medium Screen (Tablets) */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        height: 80%;
+        margin-top: 60px;
+        align-items: center;
+        justify-content: center;
+    }
+    .left-panel, .right-panel {
+        width: 100%;
+        padding: 15px;
+        box-sizing: content-box;
+    }
+    .form-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .btn-primary {
+        width: 90%;
+    }
+    .left-panel {
+      margin-top: 50px;
+    }
+    .img1, .img2, .img3, .img {
+      display: none;
+    }
 }
 
-@media (max-width: 480px) {
-  .form-header {
-    margin-top: 20px;
-  }
-  .btn-primary {
-    width: 100%;
-  }
+/* Small Screen (Phones) */
+@media (max-width: 767px) {
+    .form-header {
+        margin-top: 20px;
+    }
+    .btn-primary {
+        width: 100%;
+    }
+    .form-control {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+    .left-panel {
+      margin-top: 50px;
+    }
+    .right-panel {
+      margin-top: 2px;
+      padding-top: 2px;
+    }
+    .img1, .img2, .img3, .img {
+      display: none;
+    }
 }
 
 .linkin {
@@ -180,4 +194,5 @@ body {
   float: right;
   font-size: small;
   text-decoration: none;
-  margin-top: -20px;}
+  margin-top: -20px;
+}
