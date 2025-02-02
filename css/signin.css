@@ -4,12 +4,12 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Rubik';
   background-color: white;
   margin: 0;
 }
 
-.container {
+.main-container {
   display: flex;
   height: calc(100vh - 60px);
   width: 100vw;
@@ -32,7 +32,7 @@ body {
   align-items: center;
   padding: 0;
   text-align: center;
-  flex: 1.2;
+  flex: 0.8;
 }
 
 .right-panel {
@@ -49,16 +49,19 @@ body {
   width: 100vw;
   max-width: auto;
   background-color: white;
-  padding: 15px;
+  padding: 5px;
   border-radius: 2px;
   align-content: center;
-  margin-left: 140px;
+  margin-left: 100px;
+  border-top-right-radius: 55%;
   
 }
 .form-header {
   margin-bottom: 20px;
   margin-top: 60px;
   text-align: center;
+  position: relative;
+  right: 50px;
 }
 
 .form-header h2 {
@@ -76,6 +79,7 @@ body {
   border-radius: 0;
   border-width: 1.5px;
   padding: 8px 12px;
+  width: 400px;
 }
 
 .btn-primary:hover {
@@ -128,7 +132,7 @@ body {
 
 
 @media (max-width: 991px) {
-    .container {
+    .main-container {
         flex-direction: column;
         height: 80%;
         margin-top: 60px;
@@ -144,9 +148,10 @@ body {
     .form-container {
         max-width: 95%;
         margin: 0 auto;
+        
     }
     .btn-primary {
-        width: 90%;
+        width: 100%;
     }
     .left-panel {
       margin-top: 50px;
@@ -162,6 +167,15 @@ body {
     margin-top: 2px;
     padding-top: 2px;
   }
+  .forgot-password {
+    position: absolute;
+    left: 80% !important;
+    float: right;
+  }
+  .form-header {
+    position: relative;
+    left: 8px;
+  }
 }
 
 
@@ -172,7 +186,7 @@ body {
     .btn-primary {
         width: 100%;
     }
-    .container {
+    .main-container {
       flex-direction: column;
     }
     .form-control {
@@ -188,6 +202,11 @@ body {
     }
     .img1, .img2, .img3, .img {
       display: none;
+    }
+    .forgot-password {
+      position: absolute;
+      left: 60% !important;
+      float: right;
     }
 }
 
@@ -209,4 +228,6 @@ body {
   font-size: small;
   text-decoration: none;
   margin-top: -20px;
+  position: absolute;
+  left: 64%;
 }

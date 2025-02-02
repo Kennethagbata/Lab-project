@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     overflow: hidden !important;
 }
 
@@ -44,7 +44,12 @@ body {
 .btn-danger:active {
     color: rgb(42, 42, 42) !important;
 }
-
+.display-4 {
+    font-size: xx-large;
+}
+.lead {
+    font-size: lead;
+}
 .info-section {
     padding: 50px 0;
     background-color: #f8f9fa;
