@@ -4,12 +4,12 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Rubik';
   background-color: white;
   margin: 0;
 }
 
-.container {
+.main-container {
   display: flex;
   height: calc(100vh - 60px);
   width: 100vw;
@@ -32,7 +32,7 @@ body {
   align-items: center;
   padding: 0;
   text-align: center;
-  flex: 1.2;
+  flex: 0.8;
 }
 
 .right-panel {
@@ -49,15 +49,18 @@ body {
   width: 100vw;
   max-width: auto;
   background-color: white;
-  padding: 15px;
+  padding: 5px;
   border-radius: 2px;
   align-content: center;
-  margin-left: 140px;
+  margin-left: 100px;
+  border-top-right-radius: 55%;
 }
 .form-header {
   margin-bottom: 20px;
   margin-top: 60px;
   text-align: center;
+  position: relative;
+  right: 50px;
 }
 
 .form-header h2 {
@@ -75,17 +78,13 @@ body {
   border-radius: 0;
   border-width: 1.5px;
   padding: 8px 12px;
+  width: 400px;
 }
 
 .btn-primary:hover {
   background-color: #2972ad;
   border-color: #5a0b4d;
   box-shadow: 0 4px 6px #5a0b4d;
-}
-.error-message {
-  color: #d9534f;
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 .navbar {
@@ -111,10 +110,6 @@ body {
   background-color: #5a0b4d;
 }
 
-.password-suggestions {
-  list-style-type: none;
-  padding-left: 20px;
-}
 .left-panel p {
   white-space: nowrap;
 }
@@ -124,9 +119,9 @@ body {
 
 /* Medium Screen (Tablets) */
 @media (max-width: 991px) {
-  .container {
+  .main-container {
     flex-direction: column;
-    height: auto;
+    height: 80%;
     margin-top: 60px;
     align-items: center;
     justify-content: center;
@@ -142,7 +137,25 @@ body {
     margin: 0 auto;
   }
   .btn-primary {
-    width: 90%;
+    width: 100%;
+  }
+  .left-panel {
+    margin-top: 50px;
+  }
+  .img1, .img2, .img3, .img {
+    display: none;
+  }
+  .form-control {
+    width: 95% !important;
+    margin: 0 auto;;
+  }
+  .right-panel {
+    margin-top: 2px;
+    padding-top: 2px;
+  }
+  .form-header {
+    position: relative;
+    left: 8px;
   }
 }
 
@@ -153,6 +166,9 @@ body {
   }
   .btn-primary {
     width: 100%;
+  }
+  .main-container {
+    flex-direction: column;
   }
   .form-control {
     width: 95% !important;
@@ -180,12 +196,4 @@ body {
 
 .link2 {
   color: #5a0b4d;
-}
-
-.forgot-password {
-  color: #5a0b4d;
-  float: right;
-  font-size: small;
-  text-decoration: none;
-  margin-top: -20px;
 }
