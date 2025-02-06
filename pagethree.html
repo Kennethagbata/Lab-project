@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="pagethree.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light" style="background-color: #f8f9fa;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center fw-bold">
+                <i class="bi bi-gear-fill me-2"></i>
+             IQ Settings
+            </a>
+        <div>
+                <button class="btn btn-secondary me-2" type="button">Cancel</button>
+                <button class="btn btn-primary" type="button">Done</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="bg-white shadow-sm p-3 h-100">
+                    <p class="fw-bold d-flex align-items-center">
+                        <!-- <span class="border-start border-4 border-color: #5a0b4d" style="height: 20px; border-color:#5a0b4d;"></span> -->
+                        <span class="sidebar-border"></span>
+                        Basic Information
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8 col-12">
+                <div class="card shadow-sm p-4 mb-5">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Title</label>
+                        <p class="text-muted">Enter a Title for your IQ quiz</p>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Description (optional)</label>
+                        <p class="text-muted">Provide a short description for your IQ quiz</p>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                    <div class="card shadow-sm p-4" style="width: 300px;">
+                        <label class="form-label fw-bold">Cover Image</label>
+                        <p class="text-muted">Add a cover image to make your IQ stand out</p>
+                        <div class="image-upload">
+                            <i class="bi bi-image"></i>
+                            <p class="text-muted">Add Image</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
