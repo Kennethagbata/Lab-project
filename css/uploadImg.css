@@ -1,0 +1,72 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Image Options Container */
+.image-options-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Options at the Top */
+.options {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    box-shadow: none;
+}
+
+.option {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.option.active {
+    border-bottom: 2px solid #1b496f; /* Underline active option */
+}
+
+/* Button in the Middle */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.cloud-logo {
+    width: 120px; /* Adjust size of the cloud logo */
+    margin-bottom: 10px;
+}
+
+#action-button {
+    padding: 5px 5px;
+    font-size: x-small;
+    background-color: #5a0b4d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 25px;
+    width: 105px;
+}
+
+#action-button:hover {
+    background-color: #8e0878;
+}
+label {
+    font-size: small;
+    color: #888787;
+}
+label:hover {
+    color: #1b496f;
+}
