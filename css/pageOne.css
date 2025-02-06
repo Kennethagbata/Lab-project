@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: 'Rubik';
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .enterbtn {
+    width: 400px;
+    background-color: white;
+    display: flex;
+    gap: 138px;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid;
+  }
+
+  .a2:active{
+    background-color: #888787 !important;
+  }
+
+  .themes:active {
+    background-color: #762376 !important;
+  }
+  .save:active {
+    background-color: rgb(212, 212, 212) !important;
+  }
+
+  .content {
+    padding: 20px;
+  }
+  
+  /* Side Panel Styles */
+  .side-panel {
+    width: 240px;
+    height: 100vh;
+    background-color: #1b496f;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the panel by default */
+    transition: right 0.3s ease;
+    z-index: 2;
+  }
+  
+  .side-panel p {
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  /* Arrow Icon Styles */
+  .arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid;
+    color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 5px 0 0 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .arrow-icon:hover {
+    background-color: white;
+  }
+
+  .nav2 {
+    background-color: #1b496f;
+    padding: 10px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure the overlay is on top */
+  }
+  
+  .overlay-content {
+    background-color: white;
+    height: 370px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 0;
+    text-align: center;
+  }
+  
+  .overlay-content h2 {
+    margin-top: 50px;
+    font-size: medium;
+    font-weight: 510;
+    color: #1b496f;
+  }
+  .overlay-content p {
+    margin-top: 70px;
+    font-size: large;
+    font-weight: 600;
+    color: #5a0b4d;
+  }
+  .overlay-content button {
+    height: 28px;
+    width: 70px;
+    font-size: 16px;
+    background-color: #888787;
+    color: white;
+    font-size: small;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 60px;
+  }
+  
+  .overlay-content button:hover {
+    background-color: #555;
+  }
+
+  /* LOGO DESIGN */
+.logo {
+    height: 250px;
+    width: 350px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 460px;
+}
+
+
+.inputi {
+  width: 300px;
+  padding: 8px;
+  border: 1px none;
+  border-radius: 3px;
+  background-color: #E4FDEC;
+  color: rgb(30, 29, 29);
+  margin-left: 40px;
+  font-size: smaller;
+  outline: none;
+}
+
+.input2 {
+  width: 300px;
+  padding: 8px;
+  border: 1px none;
+  border-radius: 3px;
+  background-color: #6AA6D1;
+  color: rgb(30, 29, 29);
+  margin-left: 40px;
+  font-size: smaller;
+  outline: none;
+}
+
+.input3 {
+  width: 300px;
+  padding: 8px;
+  border: 1px none;
+  border-radius: 3px;
+  background-color: #EBC3C3;
+  color: rgb(30, 29, 29);
+  margin-left: 40px;
+  font-size: smaller;
+  outline: none;
+}
+
+.input4 {
+  width: 300px;
+  padding: 8px;
+  border: 1px none;
+  border-radius: 3px;
+  background-color: #F0C1E8;
+  color: rgb(30, 29, 29);
+  margin-left: 40px;
+  font-size: smaller;
+  outline: none;
+}
+
+input[disabled] {
+  cursor: not-allowed;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid green;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input {
+  display: none;
+}
+
+/* Tick mark (hidden by default) */
+.custom-checkbox .checkmark {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+  font-size: 16px;
+}
+
+/* Show the tick mark when checked */
+.custom-checkbox input:checked + .checkmark {
+  display: block;
+}
+
+/* Drop down for side panel */
+.dropdown {
+  position: relative;
+  width: 210px;
+  height: 30px;
+  border: 1px solid black !important;
+  box-shadow: #762376;
+  font-size: x-small;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+/* Dropdown button */
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1b496f; /* Blue background */
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 20px;
+}
+
+/* Dropdown arrow icon */
+.dropdown-arrow {
+  font-size: x-small;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown options container */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Dropdown options */
+.dropdown-options div {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  
+  
+}
+
+/* Hover effect for options */
+.dropdown-options div:hover {
+  background-color: #f1f1f1;
+  border: 1px solid;
+}
+
+/* Tick mark for selected option */
+.tick {
+  color: black;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* Show dropdown options when open */
+.dropdown.open .dropdown-options {
+  display: block;
+}
+
+/* Rotate arrow when dropdown is open */
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+
