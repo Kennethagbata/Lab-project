@@ -24,6 +24,7 @@ body {
  }
  .fint {
     font-size: small;
+    align-items: center;
  }
   .signin:active {
     background-color: rgb(235, 231, 231) !important;
@@ -38,7 +39,6 @@ body {
     padding: 20px;
     color: white;
     margin-top: 50px;
-    /* width: 100%; */
 }
 
 .btn-danger:active {
@@ -50,9 +50,9 @@ body {
 .lead {
     font-size: lead;
 }
-.info-section {
-    padding: 50px 0;
-    background-color: #f8f9fa;
+.contain1 {    
+    width: 100%;
+    
 }
 
 /* Large Screen (Desktops) */
@@ -82,10 +82,6 @@ body {
     .img {
         display: none;
     }
-    .info-section {
-        padding: 20px;
-        width: 100%;
-    } 
     .fint {
         font-size: small;
     }

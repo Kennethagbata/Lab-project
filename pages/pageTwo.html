@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/pageTwo.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="" style=" display: flex; align-items: center; gap: 5px;">
+            <h1 style="font-size: medium; font-weight: bold; margin-left: 20px; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+              </svg> IQ Settings</h1>
+        </div>
+        <div><button class="Cancel" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: white;  width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;  border-color: rgb(172, 171, 171);">Cancel</a></button>
+        <button class="Done" style="height: 32px; font-size: small; border-radius: 3px; background-color: #5a0b4d; width: 75px; border-width: 1px; margin-right: 20px;"><a href="#" style="color: white; text-decoration: none;">Done</a></button></div>
+    </div>  
+    <div style="display: flex; gap: 10px; background-color: rgb(247, 247, 247);">
+        <div style="background-color: white; height: 100vh; width: 250px; display: flex;">
+            <div style="background-color: #5a0b4d; width: 5px; height: 35px; margin-left: 20px; margin-top: 30px;"></div><div><h3 style="font-size: small; padding-top: 10px; font-weight: bold; margin-left: 5px; margin-top: 30px;">Basic Information</h3></div>
+        </div>
+        <div style="background-color: white; height: 50vh; margin-top: 10px; width: 980px;">
+            <div style="font-size: small; margin-top: 20px; margin-left: 10px;">
+                <label style="font-weight: bold;">Title</label>
+                <p style="margin-bottom: 5px;">Enter a Title for your IQ quiz</p>
+                <input type="text" style="height: 25px; width: 900px;">
+            </div>
+            <div style="font-size: small; margin-top: 20px; margin-left: 10px;">
+                <label style="font-weight: bold;">Description (optional)</label>
+                <p style="margin-bottom: 5px; margin-top: 4px;">provide a short descripton of your IQ</p>
+                <textarea style="width: 900px; height: 120px;"></textarea>
+            </div>
+            <div style="background-color: white; width: 270px; height: 240px; margin-top: 25px;">
+                <div style="font-size: small; padding-top: 7px; margin-left: 10px; margin-right: 20px;">
+                    <label style="font-weight: bold;">Cover Image</label>
+                    <p style="margin-bottom: 5px; margin-top: 4px;">Add a cover image to make your IQ stand out</p>
+                    <a href="/pages/uploadImg.html"><img src="/Assests/Frame 148.png" style="width: 200px; height: 150px; margin-left: 20px;" alt="cover-image"></a>
+                </div>
+            </div>
+        </div>
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
