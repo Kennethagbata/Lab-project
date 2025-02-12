@@ -82,16 +82,22 @@ body {
   width: 400px;
 }
 
+.error-message {
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  display: none; /* Hidden by default */
+  width: 400px;
+}
+
 .btn-primary:hover {
   background-color: #2972ad;
   border-color: #5a0b4d;
   box-shadow: 0 4px 6px #5a0b4d;
   
-}
-.error-message {
-  color: #d9534f;
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 .navbar {

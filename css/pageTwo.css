@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .Done:active {
+    background-color: #762376 !important;
+  }
+  .Cancel:active {
+    background-color: rgb(212, 212, 212) !important;
+  }
+
+  /* .sidebar {
+    min-height: 100vh; 
+    flex-shrink: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+} */

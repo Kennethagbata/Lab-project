@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Rubik';
+    overflow: hidden;
 }
 
 .navbar {
@@ -43,7 +44,7 @@ body {
   
   /* Side Panel Styles */
   .side-panel {
-    width: 240px;
+    width: 220px;
     height: 100vh;
     background-color: #1b496f;
     color: white;
@@ -52,8 +53,19 @@ body {
     right: -250px; /* Hide the panel by default */
     transition: right 0.3s ease;
     z-index: 2;
+    overflow: hidden;
   }
-  
+
+  .leftpanel {
+    position: absolute;
+    background-color: white;
+    color: black;
+    height: 91vh;
+    margin-top: 0;
+    border: 1px black solid;
+    overflow: scroll;
+  }
+
   .side-panel p {
     padding: 20px;
     margin-top: 50px;
@@ -147,7 +159,7 @@ body {
 
   /* LOGO DESIGN */
 .logo {
-    height: 250px;
+    height: 300px;
     width: 350px;
     cursor: pointer;
     margin-top: 10px;
@@ -211,11 +223,15 @@ input[disabled] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 2px solid green;
+  border: 2px solid black;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
   margin-right: 20px;
+}
+
+.custom-checkbox:hover  {
+  border: 2px solid green !important;
 }
 
 /* Hide the default checkbox */
@@ -230,7 +246,7 @@ input[disabled] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: green;
+  color: black;
   font-size: 16px;
 }
 
@@ -242,7 +258,7 @@ input[disabled] {
 /* Drop down for side panel */
 .dropdown {
   position: relative;
-  width: 210px;
+  width: 188px;
   height: 30px;
   border: 1px solid black !important;
   box-shadow: #762376;
@@ -319,5 +335,93 @@ input[disabled] {
   transform: rotate(180deg);
 }
 
+#display-image {
+  position: relative; /* Ensure it's part of the document flow */
+  margin-left: 35%; /* Reset any default margin */
+}
 
+.delete-quiz-btn {
+  background-color: white;
+  margin-left: 40px;
+  border: none;
+}
+.popup {
+  display: none;
+  position: absolute;
+  width: 23%;
+  top: 60%;
+  left: 28%;
+  height: 55%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1.5px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: small;
+}
+.confirmation-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 27.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.confirmation-content {
+  font-size: small;
+}
+.popup-content button {
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+.confirmation-content button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addBtn, #findBtn {
+  background-color: white;
+  color: black;
+  border: 1px solid;
+  width: 45%;
+  height: 25px;
+  
+}
+#addBtn {
+  margin-right: 25.5px;
+}
+
+#addQuizBtn {
+  background-color: white;
+  color: black;
+  border: 0.05px solid;
+  width: 95%;
+  height: 50%;
+  margin-top: 12px;
+  justify-self: center;
+}
+
+#searchInput {
+  background-color: white;
+  color: black;
+  border: 0.05px solid;
+  width: 95%;
+  height: 50%;
+  margin-top: 12px;
+  margin-left: 6px;
+}
+
+#confirmDeleteBtn {
+  background-color: #B71010;
+  color: white;
+  border-radius: 2px;
+}
 

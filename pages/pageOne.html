@@ -15,29 +15,69 @@
             <img class="navlogo"  style="width: 40px;" src="/Assests/Group 2 anyi[1].png" alt="navlogo">
             <button class="enterbtn" style="height: 32px;"><input type="title" style="height: 25px; border: none; outline: none; margin: 2px; font-size: small;" class="navForm" id="email" placeholder="Enter IQ title..."><a class="a2" style="text-decoration: none; color: black; background-color: #D9D9D9; width: 92px; padding: 5.6px; border-radius: 4px; font-weight: lighter; font-size: small; " href="#">settings</a>
         </div>
-        <div><button class="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
+        <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
         <button class="save" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
     </div>  
+    <!-- Main page content -->
+      <!-- Side pannel left -->
+      <div class="leftpanel" id="leftPanel">
+        <div style="padding-top: 13px; padding-left: 40px; padding-bottom: 5px; background-color: #EAF4FD; width: 100%">
+        <h3 style="font-size: x-small; margin-bottom: 1px; font-weight: bold;">Quiz</h3>
+        <img style="width: 75%;" src="/Assests/Frame 199.png" alt="quiznum"> <br>
+        </div>
+        <div></div>
+        <button class="delete-quiz-btn" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+          </svg></button>
+        <button class="add-question-btn" style="font-size: x-small; background-color: #5a0b4d; color: white; margin-top: 5px; border-radius: 3px; margin-left: 60px;">Add question</button>
+      </div>
+    </div>
+
+<!-- Pop-up for Adding/ Finding Questions -->
+              <div class="popup" id="popup">
+                <div class="popup-content">
+                    <button id="addBtn">+ Add</button>
+                    <button id="findBtn"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg> Find</button>
+                    <div id="searchBox" style="display: none;">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                    </div>
+                    <button id="addQuizBtn" style="display: none;">+ Quiz</button>
+                </div>
+            </div>
     
-    <div class="content">
+            <!-- Confirmation Pop-up for Deleting Quiz -->
+            <div class="confirmation-popup" id="confirmationPopup">
+                <div class="confirmation-content">
+                    <p style="font-weight: bold;">Delete quiz question</p>
+                    <p>Are you sure you want to delete this question? <br> This action can't be undone.</p>
+                    <button id="cancelDeleteBtn" style="background-color: #C6C3C3; margin-left: 90px; border-radius: 2px; color: black;">Cancel</button>
+                    <button id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    <div class="content" id="mainContent">
         <div style="justify-content: center; align-items: center; display: flex; margin-top: 10px;">
         <input type="title" style="font-size: smaller; height: 35px; width: 800px; text-align: center; outline: 5px;" id="type2" placeholder="Start typing your question">
         </div>
 
     <!-- LOGO Link -->
      <div>
-        <a href="./uploadImg.html" alt="logo">
+        <a id="herf" href="./uploadImg.html" alt="logo">
         <img id="display-image" src="/Assests/Frame 184.png" alt="logo" class="logo" onclick="redirectToUploadPage()">
         </a> 
      <div>
             
     
-    <!-- Side panel -->
+    <!-- Side panel Right -->
     <div class="side-panel" id="sidePanel">
         <nav class="nav2">
-            <div><button class="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
+            <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 16px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
                 <button class="save" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
         </nav>
+
 <!-- side-panel content -->
 
         <div>
@@ -139,15 +179,8 @@
      <div style="display: flex; gap: 20px; justify-content: center;">
 <div class="input-container" style="background-color: #6AA6D1; display: flex; align-items: center; width: 400px; height: 44px; margin-top: 20px;">
     <div style="background-color: #0A4975; width: 10px; height: 44px; margin-left: 10px"></div>
-    <input type="text" class="input2" id="userInput1" placeholder="Add answer 1" disabled>
-    <a href="/pages/uploadImg.html" id="photoLink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px;" height="16" class="bi bi-image-fill" id="imageLogo" alt="Click to Upload Image" viewBox="0 0 16 16">
-            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
-        </svg>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px; margin-right: 8px" height="16" class="bi bi-pen" alt="Edit" onclick="enableEdit('userInput1')" viewBox="0 0 16 16">
-        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
-    </svg>
+    <input type="text" class="input2" id="userInput1" placeholder="Add answer 1" enabled>
+
     <label class="custom-checkbox">
         <input type="checkbox">
         <span class="checkmark">✔</span>
@@ -157,15 +190,8 @@
 <!-- Answer 2 -->
 <div class="input-container" style="background-color: #EBC3C3; display: flex; align-items: center; width: 400px; height: 44px; margin-top: 20px;">
     <div style="background-color: #B71010; width: 10px; height: 44px; margin-left: 10px"></div>
-    <input type="text" class="input3" id="userInput2" placeholder="Add answer 2" disabled>
-    <a href="/pages/uploadImg.html" id="photoLink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px;" height="16" class="bi bi-image-fill" id="imageLogo" alt="Click to Upload Image" viewBox="0 0 16 16">
-            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
-        </svg>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px; margin-right: 8px" height="16" class="bi bi-pen" alt="Edit" onclick="enableEdit('userInput2')" viewBox="0 0 16 16">
-        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
-    </svg>
+    <input type="text" class="input3" id="userInput2" placeholder="Add answer 2" enabled>
+
     <label class="custom-checkbox">
         <input type="checkbox">
         <span class="checkmark">✔</span>
@@ -176,15 +202,8 @@
  <div style="display: flex; gap: 20px; justify-content: center;">
 <div class="input-container" style="background-color: #F0C1E8; display: flex; align-items: center; width: 400px; height: 44px; margin-top: 20px;">
     <div style="background-color: #752C69; width: 10px; height: 44px; margin-left: 10px"></div>
-    <input type="text" class="input4" id="userInput3" placeholder="Add answer 3 (optional)" disabled>
-    <a href="/pages/uploadImg.html" id="photoLink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px;" height="16" class="bi bi-image-fill" id="imageLogo" alt="Click to Upload Image" viewBox="0 0 16 16">
-            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
-        </svg>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px; margin-right: 8px" height="16" class="bi bi-pen" alt="Edit" onclick="enableEdit('userInput3')" viewBox="0 0 16 16">
-        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
-    </svg>
+    <input type="text" class="input4" id="userInput3" placeholder="Add answer 3 (optional)" enabled>
+
     <label class="custom-checkbox">
         <input type="checkbox">
         <span class="checkmark">✔</span>
@@ -194,15 +213,8 @@
 <!-- Answer 4 -->
 <div class="input-container" style="background-color: #E4FDEC; display: flex; align-items: center; width: 400px; height: 44px; margin-top: 20px;">
     <div style="background-color: green; width: 10px; height: 44px; margin-left: 10px"></div>
-    <input type="text" class="inputi" id="userInput4" placeholder="Add answer 4 (optional)" disabled>
-    <a href="/pages/uploadImg.html" id="photoLink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px;" height="16" class="bi bi-image-fill" id="imageLogo" alt="Click to Upload Image" viewBox="0 0 16 16">
-            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
-        </svg>
-    </a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" style="margin-left: 8px; margin-right: 8px" height="16" class="bi bi-pen" alt="Edit" onclick="enableEdit('userInput4')" viewBox="0 0 16 16">
-        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
-    </svg>
+    <input type="text" class="inputi" id="userInput4" placeholder="Add answer 4 (optional)" enabled>
+
     <label class="custom-checkbox">
         <input type="checkbox">
         <span class="checkmark">✔</span>
