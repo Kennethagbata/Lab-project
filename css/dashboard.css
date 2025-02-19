@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.left-panel {
+    padding: 20px;
+    margin-top: 5%;
+    padding-left: 50px;
+}
+ .left-panel h3 {
+    color: #5a0b4d;
+    font-weight: bold;
+    font-size: large;
+ }
+ .left-panel h4 {
+    color: #0A4975;
+    font-size: medium;
+    font-weight: bold;
+ }
+ .div1 {
+    border: px solid;
+    width: 40%;
+    height: 30%;
+    margin-left: 25%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px grey;
+    padding-bottom: 20px;
+ }
+
+.btn-primary, .btn11 {
+    background-color: #5a0b4d;
+    border: none;
+    font-size: x-small;
+    width: 60px;
+    border-radius: 2px;
+    padding: 5px;
+    
+}
+
+.btn-primary:hover {
+    background-color: #5a0b4d;
+    border-color: #5a0b4d;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .btn-logout {
+    background-color: #5a0b4d;
+    color: white;
+    border: none;
+}
+
+.navbar .btn-logout:hover {
+    background-color: #5a0b4d;
+}
+
+.quiz-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.quiz-item:hover {
+    background-color: #f1f1f1;
+}

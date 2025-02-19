@@ -425,3 +425,58 @@ input[disabled] {
   border-radius: 2px;
 }
 
+/* pop up for save */
+/* Pop-up Overlay Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content1 {
+  background-color: white;
+  height: 300px;
+  width: 450px;
+  padding: 20px;
+  border-radius: 0;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content1 p {
+  margin-bottom: 20px;
+}
+
+.popup-content1 button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.popup-content1 button:hover {
+  background-color: #ddd;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
