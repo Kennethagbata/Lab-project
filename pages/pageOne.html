@@ -13,10 +13,12 @@
      <div class="navbar">
         <div class="" style=" display: flex; align-items: center; gap: 5px;">
             <img class="navlogo"  style="width: 40px;" src="/Assests/Group 2 anyi[1].png" alt="navlogo">
-            <button class="enterbtn" style="height: 32px;"><input type="title" style="height: 25px; border: none; outline: none; margin: 2px; font-size: small;" class="navForm" id="email" placeholder="Enter IQ title..."><a class="a2" style="text-decoration: none; color: black; background-color: #D9D9D9; width: 92px; padding: 5.6px; border-radius: 4px; font-weight: lighter; font-size: small; " href="#">settings</a>
+            <button class="enterbtn" style="height: 32px;"><input type="title" style="height: 25px; border: none; outline: none; margin: 2px; font-size: small;" class="navForm" id="email" placeholder="Enter IQ title..."><a class="a2" style="text-decoration: none; color: black; background-color: white; width: 92px; padding: 5.6px; border-radius: 4px; font-weight: lighter; font-size: small; " href="/pages/pageTwo.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+              </svg></a>
         </div>
-        <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
-        <button class="save" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
+        <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 40px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Settings</a></button>
+        <button class="save" id="saveButton" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
     </div>  
     <!-- Main page content -->
       <!-- Side pannel left -->
@@ -74,8 +76,8 @@
     <!-- Side panel Right -->
     <div class="side-panel" id="sidePanel">
         <nav class="nav2">
-            <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 16px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Themes</a></button>
-                <button class="save" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
+            <div><button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 16px; background-color: #5a0b4d;  width: 75px; border-width: 1px;"><a href="#" style="color: white; text-decoration: none;">Settings</a></button>
+                <button class="save" id="saveButton" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
         </nav>
 
 <!-- side-panel content -->
@@ -221,12 +223,56 @@
     </label>
     </div>
 </div>
-
-
+<button style="margin-left: 47%; font-size: x-small; border: 1px solid; border-radius: 2px; margin-top: 15px; padding: 5px;"><a style="text-decoration: none; color: black;" href="/pages/dashboard.html">Back to home</a></button>
 </div>
     <!-- side expand -->
-    
     <div class="arrow-icon" id="arrowIcon">&gt;</div>
+
+<!-- POP UPS FOR SAVE -->
+<!-- Pop-up 1: Saving Process -->
+<div class="popup-overlay" id="popup1">
+    <div class="popup-content1">
+        <p style="margin-top: 40px; font-weight: bold;">YOUR IQ IS SAVING</p>
+        <p style="font-weight: bold; color: #338F52; margin-top: 30px;">PROCESSING</p>
+        <p style="font-weight: bold; color: #338F52; margin-top: 25px;">...</p>
+    </div>
+</div>
+
+<!-- Pop-up 2: Saved Successfully -->
+<div class="popup-overlay" id="popup2">
+    <div class="popup-content1">
+        <p style="margin-top: 40px; font-weight: bold;">YOUR IQ HAS BEEN SAVED</p>
+        <p  style="font-weight: bold; color: #338F52; margin-top: 30px;">SAVED</p>
+        <p style="color: #338F52; margin-top: 25px;">✔</p>
+    </div>
+</div>
+
+<!-- Pop-up 3: Share, Back to Edit, Done -->
+<div class="popup-overlay" id="popup3">
+    <div class="popup-content1">
+        <p style="margin-top: 40px; font-weight: bold;">YOUR IQ IS READY</p>
+        <button id="shareBtn" style="width: 330px; margin-bottom: 65px; font-size: x-small; font-weight: bold; text-align: left;"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+            <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
+          </svg> </span>Share <br> <span style="font-size: x-small; font-weight: lighter; margin-left: 20px;">Allow others to use this IQ</span></button> <br>
+        <button id="backToEditBtn">Back to Edit</button>
+        <button id="doneBtn" style="color: white; background-color: #5a0b4d;">Done</button>
+    </div>
+</div>
+
+<!-- Pop-up 4: Share via Email or Social Media -->
+<div class="popup-overlay" id="popup4">
+    <div class="popup-content1">
+        <p>Share your IQ:</p>
+        <input type="email" id="emailInput" placeholder="Enter email to share">
+        <div class="social-icons">
+            <img src="/Assests/instagram-icon.png" alt="Instagram" class="social-icon">
+            <img src="/Assests/whatsapp-icon.png" alt="WhatsApp" class="social-icon">
+            <img src="/Assests/facebook-icon.png" alt="Facebook" class="social-icon">
+        </div>
+        <button id="closeSharePopupBtn">Close</button>
+    </div>
+</div>
+
     <script src="/js/pageOne.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

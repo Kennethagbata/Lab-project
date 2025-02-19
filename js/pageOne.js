@@ -275,12 +275,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <nav class="nav2">
                     <div>
                         <button class="themes" id="themes" style="height: 32px; font-size: small; border-radius: 3px; margin-right: 16px; background-color: #5a0b4d; width: 75px; border-width: 1px;">
-                            <a href="#" style="color: white; text-decoration: none;">Themes</a>
-                        </button>
-                        <button class="save" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;">
-                            <a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a>
-                        </button>
-                    </div>
+                            <a href="#" style="color: white; text-decoration: none;">Settings</a>
+                         <button class="save" id="saveButton" style="height: 32px; font-size: small; border-radius: 3px; background-color: white; color: #5a0b4d; border-color: rgb(172, 171, 171); width: 75px; border-width: 1px;"><a href="#" style="color: #5a0b4d; text-decoration: none;">Save</a></button></div>
                 </nav>
                 <div>
                     <h1 style="font-size: smaller; margin-top: 20px; margin-left: 20px;">
@@ -400,3 +396,58 @@ function toggleButton(activeButton, otherButton) {
 
 addBtn.addEventListener('click', () => toggleButton(addBtn, findBtn));
 findBtn.addEventListener('click', () => toggleButton(findBtn, addBtn));
+
+
+// pop up for save
+
+// Function to show a popup
+function showPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = 'flex';
+}
+
+// Function to hide a popup
+function hidePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = 'none';
+}
+
+// Save button event listeners
+document.querySelectorAll('.save').forEach(button => {
+    button.addEventListener('click', () => {
+        // Show the first popup
+        showPopup('popup1');
+
+        // After 5 seconds, hide the first popup and show the second popup
+        setTimeout(() => {
+            hidePopup('popup1');
+            showPopup('popup2');
+        }, 5000);
+
+        // After another 5 seconds, hide the second popup and show the third popup
+        setTimeout(() => {
+            hidePopup('popup2');
+            showPopup('popup3');
+        }, 10000);
+    });
+});
+
+// Event listeners for the third popup buttons
+document.getElementById('shareBtn').addEventListener('click', () => {
+    hidePopup('popup3');
+    showPopup('popup4');
+});
+
+document.getElementById('backToEditBtn').addEventListener('click', () => {
+    hidePopup('popup3');
+});
+
+document.getElementById('doneBtn').addEventListener('click', () => {
+    // Redirect to a new page (you can replace the URL with your desired destination)
+    window.location.href = '/pages/pageThree.html';
+});
+
+// Event listener for the fourth popup close button
+document.getElementById('closeSharePopupBtn').addEventListener('click', () => {
+    hidePopup('popup4');
+});
